@@ -27,7 +27,7 @@ async def random_movie(update: Update, context: ContextTypes.DEFAULT_TYPE):
     con = sqlite3.connect("movie_database.db")
     with con:
         cur = con.cursor()
-        cur.execute("SELECT * FROM movies ORDER BY RANDOM() LIMIT 1")
+        cur.execute("ЗАДАНИЕ")
         row = cur.fetchall()[0]
         cur.close()
     await send_info(update, context, row)
